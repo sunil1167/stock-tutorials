@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f8f7">
+  <meta name="description" content="A complete offline index for your interactive stock market study notebooks. Browse lessons 2 through 20.">
+  <title>Trading Study Library | 20-Lesson Course</title>
+  <style>
+    :root{color-scheme:light;--bg:#f6f8f7;--surface:#fff;--ink:#152b30;--muted:#667b81;--line:#e0e9e7;--accent:#047d70;--accent-text:#04695e;--accent-soft:#e4f5f0;--hero:#0e2330;--hero-ink:#f0faf7;--shadow:0 10px 30px rgba(16,41,42,.04)}
+    :root[data-theme="dark"]{color-scheme:dark;--bg:#101a21;--surface:#182630;--ink:#edf7f6;--muted:#a7b9bb;--line:#2c424a;--accent:#56ceb5;--accent-text:#72dfc4;--accent-soft:#1e4845;--hero:#172c36;--hero-ink:#ecfbf8;--shadow:0 10px 35px rgba(0,0,0,.13)}
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #33b7a6;outline-offset:3px}::selection{background:#9ee4d7;color:#0b2c31}
+    .container{max-width:1190px;margin:0 auto;padding:0 30px}
+    .site-header{border-bottom:1px solid var(--line);background:var(--surface)}.header-inner{display:flex;gap:20px;align-items:center;justify-content:space-between;min-height:75px}.identity{display:flex;gap:12px;align-items:center}.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:#123e41;color:#8ef0d7;font-weight:850;font-size:17px;letter-spacing:-.05em}.identity-copy{display:grid;line-height:1.3}.identity-copy strong{font-size:14px;letter-spacing:-.025em}.identity-copy small{font-size:10px;color:var(--muted);letter-spacing:.13em;text-transform:uppercase;font-weight:750;margin-top:3px}.header-right{display:flex;align-items:center;gap:15px}.header-label{font-size:12px;color:var(--muted);font-weight:650}.theme-toggle{display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:11px;padding:9px 13px;font-size:12px;font-weight:750}.theme-toggle:hover{border-color:var(--accent)}
+    .hero{padding:36px 0 0}.hero-panel{position:relative;isolation:isolate;overflow:hidden;border-radius:24px;background:var(--hero);color:var(--hero-ink);padding:62px clamp(26px,5.3vw,72px) 40px;box-shadow:0 25px 55px rgba(13,36,46,.12)}.hero-panel:before{content:"";position:absolute;width:450px;height:450px;right:-170px;top:-220px;border:1px solid #7ce3c930;border-radius:50%;box-shadow:0 0 0 65px #86e4cc08,0 0 0 132px #86e4cc06;z-index:-1}.hero-panel:after{content:"";position:absolute;width:420px;height:420px;right:6%;bottom:-330px;filter:blur(5px);background:radial-gradient(circle,#1ab4a133,transparent 65%);z-index:-1}.hero-topline{display:inline-flex;align-items:center;gap:9px;color:#a8e8d8;font-size:11px;text-transform:uppercase;letter-spacing:.15em;font-weight:800}.glow-dot{width:8px;height:8px;border-radius:50%;background:#66e1c0;box-shadow:0 0 0 5px #66e1c01b}.hero h1{font-size:clamp(2.6rem,5vw,4.55rem);line-height:1.05;letter-spacing:-.066em;max-width:760px;margin:22px 0 22px;font-weight:850}.hero h1 span{color:#70d7bd}.hero-text{font-size:clamp(15px,1.6vw,17px);color:#bfd1d6;max-width:625px;margin:0 0 38px;line-height:1.75}.hero-footer{border-top:1px solid #ffffff25;padding-top:25px;display:flex;flex-wrap:wrap;gap:23px 42px;align-items:center}.hero-stat{display:flex;align-items:baseline;gap:9px}.hero-stat strong{font-size:23px;letter-spacing:-.06em}.hero-stat span{font-size:12px;color:#bdd1d1}.hero-stat + .hero-stat{position:relative}.hero-stat + .hero-stat:before{content:"";position:absolute;left:-22px;top:7px;width:1px;height:18px;background:#ffffff28}
+    .catalogue{padding:44px 0 90px}.catalogue-toolbar{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:22px}.catalogue-intro small{color:var(--accent-text);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:900}.catalogue-intro h2{font-size:clamp(25px,3vw,32px);letter-spacing:-.05em;line-height:1.2;margin:7px 0 3px}.catalogue-intro p{color:var(--muted);margin:0;font-size:13px}.search-wrap{position:relative;display:block;min-width:285px}.search-wrap svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted)}.search-input{width:100%;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:13px;padding:13px 16px 13px 43px;outline:none;font-size:13px;box-shadow:var(--shadow)}.search-input:focus{border-color:var(--accent)}.search-input::placeholder{color:var(--muted)}
+    .quick-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:20px 0 43px}.quick-links a{font-size:11px;font-weight:750;padding:8px 12px;border:1px solid var(--line);border-radius:100px;background:var(--surface);color:var(--muted)}.quick-links a:hover{color:var(--accent-text);border-color:var(--accent)}
+    .course-section{margin:0 0 52px;scroll-margin-top:30px}.section-header{display:flex;gap:18px;align-items:flex-start;margin-bottom:22px}.chapter-marker{font:800 14px/1 ui-monospace,Menlo,monospace;color:var(--accent-text);background:var(--accent-soft);border:1px solid transparent;width:46px;height:46px;flex:0 0 46px;border-radius:13px;display:grid;place-items:center}.section-kicker{font-size:10px;font-weight:850;letter-spacing:.16em;color:var(--accent-text);padding-top:1px}.section-kicker span{color:var(--muted);margin:0 7px}.section-header h2{font-size:25px;letter-spacing:-.05em;margin:5px 0 2px;line-height:1.2}.section-header p{font-size:13px;margin:0;color:var(--muted)}
+    .lesson-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.lesson-card{display:flex;min-width:0;flex-direction:column;min-height:234px;border:1px solid var(--line);background:var(--surface);border-radius:17px;padding:22px 22px 18px;box-shadow:var(--shadow);transition:transform .17s ease,box-shadow .17s ease,border-color .17s ease}.lesson-card:not(.is-missing):hover{transform:translateY(-3px);border-color:#88cbbc;box-shadow:0 16px 36px rgba(15,50,47,.09)}.card-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.lesson-id{font-size:14px;font-weight:850;color:var(--accent-text);font-variant-numeric:tabular-nums;letter-spacing:-.025em}.card-status{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:10px;font-weight:650;white-space:nowrap}.status-dot{width:6px;height:6px;background:#28aa83;border-radius:50%}.lesson-card h3{font-size:17px;line-height:1.33;letter-spacing:-.03em;margin:26px 0 8px;font-weight:775}.lesson-card p{font-size:12px;line-height:1.65;color:var(--muted);margin:0 0 20px}.card-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:auto;padding-top:13px;font-size:11px;font-weight:800;color:var(--accent-text)}.card-arrow{font-size:18px;line-height:1}.is-missing{background:repeating-linear-gradient(-45deg,var(--surface),var(--surface) 16px,var(--bg) 16px,var(--bg) 17px);box-shadow:none;border-style:dashed}.is-missing h3{color:var(--muted)}.muted-status,.no-link{color:var(--muted)}.is-missing .card-bottom{color:var(--muted)}
+    .no-results{display:none;padding:40px 24px;border:1px dashed var(--line);border-radius:14px;text-align:center;color:var(--muted);background:var(--surface)}.no-results[aria-hidden="false"]{display:block}.footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}.footer strong{color:var(--ink)}
+    [hidden]{display:none!important}
+    @media(max-width:900px){.lesson-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.container{padding:0 24px}}
+    @media(max-width:640px){.container{padding:0 17px}.header-inner{min-height:66px}.header-label{display:none}.hero{padding-top:17px}.hero-panel{padding:40px 24px 27px;border-radius:18px}.hero h1{margin:19px 0;font-size:clamp(2.5rem,10vw,3.4rem)}.hero-text{margin-bottom:29px}.hero-footer{gap:16px 29px}.hero-stat + .hero-stat:before{display:none}.catalogue{padding:36px 0 65px}.catalogue-toolbar{align-items:stretch;flex-direction:column;gap:20px}.search-wrap{min-width:0}.lesson-grid{grid-template-columns:1fr;gap:12px}.lesson-card{min-height:185px;padding:19px 19px 15px}.lesson-card h3{margin-top:17px}.section-header{gap:13px}.section-header h2{font-size:22px}.chapter-marker{width:39px;height:39px;flex-basis:39px}.course-section{margin-bottom:45px}.quick-links{gap:7px;margin-bottom:35px}.hero-stat strong{font-size:20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lesson-card{transition:none}}
+    @media print{.theme-toggle,.search-wrap,.quick-links{display:none!important}.hero-panel{box-shadow:none}.lesson-card{break-inside:avoid;box-shadow:none}.catalogue{padding-top:25px}.course-section{break-before:auto}}
+  </style>
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner">
+    <a class="identity" href="index.html" aria-label="Trading Study Library homepage"><span class="brand-mark">T.</span><span class="identity-copy"><strong>TRADING STUDY LIBRARY</strong><small>Your offline learning desk</small></span></a>
+    <div class="header-right"><span class="header-label">Independent HTML notebooks</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme"><span id="themeIcon" aria-hidden="true">☾</span><span id="themeText">Dark mode</span></button></div>
+  </div></header>
+  <main>
+    <div class="container hero"><section class="hero-panel" aria-labelledby="hero-title">
+      <div class="hero-topline"><span class="glow-dot"></span>THE COMPLETE STUDY INDEX</div>
+      <h1 id="hero-title">Understand markets.<br><span>One lesson at a time.</span></h1>
+      <p class="hero-text">Your interactive trading notebooks, now in one place. Explore the lessons in order, pick up where you left off, and learn entirely offline.</p>
+      <div class="hero-footer"><div class="hero-stat"><strong>19</strong><span>Lessons available</span></div><div class="hero-stat"><strong>20</strong><span>Planned lessons</span></div><div class="hero-stat"><strong>100%</strong><span>Offline navigation</span></div></div>
+    </section></div>
+    <div class="container catalogue" id="curriculum">
+      <div class="catalogue-toolbar"><div class="catalogue-intro"><small>THE CURRICULUM</small><h2>Your learning roadmap</h2><p>Episodes 2–20 are ready. Episode 1 was not uploaded.</p></div>
+        <label class="search-wrap" for="lessonSearch"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg><input class="search-input" id="lessonSearch" type="search" placeholder="Search lessons or topics…" autocomplete="off" aria-label="Search lessons"></label></div>
+      <nav class="quick-links" aria-label="Jump to a course section"><a href="#foundations">Foundations</a><a href="#price-action">Price Action</a><a href="#trading-discipline">Trading Discipline</a><a href="#advanced-and-review">Advanced &amp; Review</a></nav>
+      <section class="course-section" data-section="Foundations" id="foundations">
+  <div class="section-header"><div class="chapter-marker">01</div><div><div class="section-kicker">PART 01 <span aria-hidden="true">/</span> FOUNDATIONS</div><h2>Start with the essentials</h2><p>Price movement, supply and demand, trade planning and psychology.</p></div></div>
+  <div class="lesson-grid"><article class="lesson-card is-missing" data-search="01 lesson 1 not uploaded foundations" aria-label="Lesson 01 not uploaded">
+          <div class="card-top"><span class="lesson-id">01</span><span class="card-status muted-status">Not uploaded</span></div>
+          <h3>Lesson 1</h3><p>The file for Episode 1 was not included in the upload.</p>
+          <div class="card-bottom"><span class="no-link">Unavailable</span><span aria-hidden="true">—</span></div></article><a class="lesson-card" href="Episode_02_Stock_Prices_Demand_Supply_Interactive_Notebook.html" data-search="02 why stock prices move explore price movement, candles and market dynamics. foundations" aria-label="Open Lesson 02: Why Stock Prices Move">
+          <div class="card-top"><span class="lesson-id">02</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Why Stock Prices Move</h3><p>Explore price movement, candles and market dynamics.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="episode3_study_notebook.html" data-search="03 demand &amp; supply zones learn how supply and demand shape price action. foundations" aria-label="Open Lesson 03: Demand &amp; Supply Zones">
+          <div class="card-top"><span class="lesson-id">03</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Demand &amp; Supply Zones</h3><p>Learn how supply and demand shape price action.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="Episode_04_Entry_Stoploss_Target_Interactive_Notebook.html" data-search="04 entry, stop-loss &amp; target study the core elements of a structured trade plan. foundations" aria-label="Open Lesson 04: Entry, Stop-Loss &amp; Target">
+          <div class="card-top"><span class="lesson-id">04</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Entry, Stop-Loss &amp; Target</h3><p>Study the core elements of a structured trade plan.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="episode_05_trading_psychology_interactive_notebook.html" data-search="05 trading psychology understand how market information and emotions affect decisions. foundations" aria-label="Open Lesson 05: Trading Psychology">
+          <div class="card-top"><span class="lesson-id">05</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Trading Psychology</h3><p>Understand how market information and emotions affect decisions.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a></div>
+</section>
+<section class="course-section" data-section="Price Action" id="price-action">
+  <div class="section-header"><div class="chapter-marker">02</div><div><div class="section-kicker">PART 02 <span aria-hidden="true">/</span> PRICE ACTION</div><h2>Learn to read the market</h2><p>Candles, time frames, trade evaluation and emotional discipline.</p></div></div>
+  <div class="lesson-grid"><a class="lesson-card" href="Episode_06_Price_Action_Study_Notebook.html" data-search="06 price action behind the candles read what individual candles communicate about the market. price action" aria-label="Open Lesson 06: Price Action Behind the Candles">
+          <div class="card-top"><span class="lesson-id">06</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Price Action Behind the Candles</h3><p>Read what individual candles communicate about the market.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="Episode_07_Multiple_Time_Frame_Analysis_Study_Notebook.html" data-search="07 multiple time frame analysis connect the broader picture with trading time frames. price action" aria-label="Open Lesson 07: Multiple Time Frame Analysis">
+          <div class="card-top"><span class="lesson-id">07</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Multiple Time Frame Analysis</h3><p>Connect the broader picture with trading time frames.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="episode_08_trade_score_notebook.html" data-search="08 trade score examine factors used to assess potential trades. price action" aria-label="Open Lesson 08: Trade Score">
+          <div class="card-top"><span class="lesson-id">08</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Trade Score</h3><p>Examine factors used to assess potential trades.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="episode_09_trading_style_emotions_notebook.html" data-search="09 trading styles &amp; emotional discipline study styles of trading and emotional discipline. price action" aria-label="Open Lesson 09: Trading Styles &amp; Emotional Discipline">
+          <div class="card-top"><span class="lesson-id">09</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Trading Styles &amp; Emotional Discipline</h3><p>Study styles of trading and emotional discipline.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a></div>
+</section>
+<section class="course-section" data-section="Trading Discipline" id="trading-discipline">
+  <div class="section-header"><div class="chapter-marker">03</div><div><div class="section-kicker">PART 03 <span aria-hidden="true">/</span> TRADING DISCIPLINE</div><h2>Build your trading framework</h2><p>Risk management, moving averages, trend analysis and countertrend trading.</p></div></div>
+  <div class="lesson-grid"><a class="lesson-card" href="episode10_risk_management_study_notebook.html" data-search="10 risk management explore risk control and position planning. trading discipline" aria-label="Open Lesson 10: Risk Management">
+          <div class="card-top"><span class="lesson-id">10</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Risk Management</h3><p>Explore risk control and position planning.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="Episode_11_Trading_Study_Notebook.html" data-search="11 aggressive vs. conservative trading consider when to take a more cautious approach. trading discipline" aria-label="Open Lesson 11: Aggressive vs. Conservative Trading">
+          <div class="card-top"><span class="lesson-id">11</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Aggressive vs. Conservative Trading</h3><p>Consider when to take a more cautious approach.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="episode_12_moving_averages_study_notebook.html" data-search="12 moving averages &amp; their correlation understand moving averages in market context. trading discipline" aria-label="Open Lesson 12: Moving Averages &amp; Their Correlation">
+          <div class="card-top"><span class="lesson-id">12</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Moving Averages &amp; Their Correlation</h3><p>Understand moving averages in market context.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="episode13_advanced_trend_analysis.html" data-search="13 advanced trend analysis build on trend evaluation and context. trading discipline" aria-label="Open Lesson 13: Advanced Trend Analysis">
+          <div class="card-top"><span class="lesson-id">13</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Advanced Trend Analysis</h3><p>Build on trend evaluation and context.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="episode_14_trading_against_the_trend_study_notebook.html" data-search="14 trading against the trend study the challenges of countertrend trading. trading discipline" aria-label="Open Lesson 14: Trading Against the Trend">
+          <div class="card-top"><span class="lesson-id">14</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Trading Against the Trend</h3><p>Study the challenges of countertrend trading.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a></div>
+</section>
+<section class="course-section" data-section="Advanced &amp; Review" id="advanced-and-review">
+  <div class="section-header"><div class="chapter-marker">04</div><div><div class="section-kicker">PART 04 <span aria-hidden="true">/</span> ADVANCED &AMP; REVIEW</div><h2>Connect the complete picture</h2><p>Revision, sectors, candlestick patterns, gaps and market traps.</p></div></div>
+  <div class="lesson-grid"><a class="lesson-card" href="Episode_15_Trading_Revision_Interactive_Notebook.html" data-search="15 trading revision revisit ideas across the earlier lessons. advanced &amp; review" aria-label="Open Lesson 15: Trading Revision">
+          <div class="card-top"><span class="lesson-id">15</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Trading Revision</h3><p>Revisit ideas across the earlier lessons.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="episode16_sectoral_analysis_study_notebook.html" data-search="16 sectoral analysis understand how sector context connects to trading. advanced &amp; review" aria-label="Open Lesson 16: Sectoral Analysis">
+          <div class="card-top"><span class="lesson-id">16</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Sectoral Analysis</h3><p>Understand how sector context connects to trading.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="Episode17_Study_Notebook.html" data-search="17 candlestick patterns &amp; their truth examine candlestick patterns and their limitations. advanced &amp; review" aria-label="Open Lesson 17: Candlestick Patterns &amp; Their Truth">
+          <div class="card-top"><span class="lesson-id">17</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Candlestick Patterns &amp; Their Truth</h3><p>Examine candlestick patterns and their limitations.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="Episode_18_Gap_Theory_Study_Notebook.html" data-search="18 gap theory study gaps and how they relate to market action. advanced &amp; review" aria-label="Open Lesson 18: Gap Theory">
+          <div class="card-top"><span class="lesson-id">18</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Gap Theory</h3><p>Study gaps and how they relate to market action.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="Episode_19_Market_Traps_Interactive_Study_Notebook.html" data-search="19 market traps &amp; conventional patterns examine traps and assumptions behind familiar patterns. advanced &amp; review" aria-label="Open Lesson 19: Market Traps &amp; Conventional Patterns">
+          <div class="card-top"><span class="lesson-id">19</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Market Traps &amp; Conventional Patterns</h3><p>Examine traps and assumptions behind familiar patterns.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a><a class="lesson-card" href="Episode_20_Putting_It_All_Together_Study_Notebook.html" data-search="20 putting it all together connect the course concepts into a coherent approach. advanced &amp; review" aria-label="Open Lesson 20: Putting It All Together">
+          <div class="card-top"><span class="lesson-id">20</span><span class="card-status"><span class="status-dot"></span>Available offline</span></div>
+          <h3>Putting It All Together</h3><p>Connect the course concepts into a coherent approach.</p>
+          <div class="card-bottom"><span>Open notebook</span><span class="card-arrow" aria-hidden="true">↗</span></div></a></div>
+</section>
+      <div class="no-results" id="noResults" aria-hidden="true">No lessons match your search. Try another topic or lesson number.</div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span><strong>Trading Study Library</strong> · 19 original notebooks, with added course navigation</span><span>Open <strong>index.html</strong> from this folder — no internet needed.</span></div></footer>
+  <script>
+    (function(){
+      'use strict';
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const icon = document.getElementById('themeIcon');
+      const themeText = document.getElementById('themeText');
+      function setTheme(mode){
+        root.setAttribute('data-theme',mode);
+        icon.textContent = mode==='dark' ? '☀' : '☾';
+        themeText.textContent = mode==='dark' ? 'Light mode' : 'Dark mode';
+      }
+      let storedTheme = null;
+      try { storedTheme = localStorage.getItem('trading-course-home-theme'); } catch(e) {}
+      setTheme(storedTheme==='dark' ? 'dark' : 'light');
+      toggle.addEventListener('click',function(){
+        const next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        setTheme(next);
+        try{localStorage.setItem('trading-course-home-theme',next);}catch(e){}
+      });
+      const input=document.getElementById('lessonSearch');
+      const cards=Array.from(document.querySelectorAll('.lesson-card'));
+      const sections=Array.from(document.querySelectorAll('.course-section'));
+      const empty=document.getElementById('noResults');
+      function updateSearch(){
+        const terms=input.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+        let count=0;
+        cards.forEach(function(card){
+          const searchable=card.getAttribute('data-search') || '';
+          const match=terms.every(function(term){return searchable.includes(term);});
+          card.hidden=!match;
+          if(match)count++;
+        });
+        sections.forEach(function(section){section.hidden=!Array.from(section.querySelectorAll('.lesson-card')).some(function(card){return !card.hidden;});});
+        empty.setAttribute('aria-hidden',count===0 ? 'false':'true');
+      }
+      input.addEventListener('input',updateSearch);
+    })();
+  </script>
+</body></html>
